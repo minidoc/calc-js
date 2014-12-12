@@ -1,0 +1,1 @@
+/* This is the file which would contain the javascript */
