@@ -23,6 +23,16 @@ function displayResult(paramValue)
    divResult.innerHTML = paramValue;   
 }
 
+function displayExpression(expression)
+{
+   // for help while building the logic. Remove when done.
+   
+   divExpression.innerHTML = expression;   
+   divAccumulator.innerHTML = gAccumulator;
+   divOperator.innerHTML = gOperator ;
+   divOperand.innerHTML = gOperand;   
+}
+
 function handleNumberClick(number){
      if(!gOperandEntryMode){
         gOperand = number ;
@@ -34,7 +44,7 @@ function handleNumberClick(number){
      gOperandEntryMode = true ;        
      displayResult(gOperand)
      gExpression += number ;
-     
+     displayExpression(gExpression);
 }
 
 
@@ -49,7 +59,7 @@ function handleOperatorClick(operator){
     gOperator = operator ;  
     gOperandEntryMode = false; 
     displayResult(gAccumulator);    
-
+    displayExpression(gExpression);    
 }
 
 function setExpressionString(operator){
@@ -95,5 +105,6 @@ function resetValues(operandValue)
     gExpression = '' ;
     gAccumulator = 0;
     gOperandEntryMode = false;
+    displayExpression(gExpression);
     displayResult(gOperand);  
 }
