@@ -6,6 +6,7 @@ input {
 	border: 1px solid #333; 
 	background: #667;
 	color: #ccc;
+	padding: 0px;
 }
 
 td {

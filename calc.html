@@ -11,35 +11,35 @@
     <h2>Calculator</h2>   
     <table>
       <tr> 
-       <td colspan="4"><div id="result"></div></td>
+       <td colspan="4"><div id="divResult" align="right">0</div></td>
      </tr>
      <tr>
-      <td><input type="button" value="AC"></input></td>
-      <td><input type="button" value="+/-"></input></td>
-      <td><input type="button" value="/"></input></td>
-      <td><input type="button" value="x"></input></td>
+      <td><input type="button" value="AC" onclick="resetValues(0)"></input></td>
+      <td><input type="button" value="+/-" onclick="togglePlusMinus()"></input></td>
+      <td><input type="button" value="/" onclick="handleOperatorClick(this.value)"></input></td>
+      <td><input type="button" value="x" onclick="handleOperatorClick(this.value)"></input></td>
     </tr>
     <tr>
-      <td><input type="button" value="7"></input></td>
-      <td><input type="button" value="8"></input></td>
-      <td><input type="button" value="9"></input></td>
-      <td><input type="button" value="-"></input></td>
+      <td><input type="button" value="7" onclick="handleNumberClick(this.value)"></input></td>
+      <td><input type="button" value="8" onclick="handleNumberClick(this.value)"></input></td>
+      <td><input type="button" value="9"  onclick="handleNumberClick(this.value)"></input></td>
+      <td><input type="button" value="-" onclick="handleOperatorClick(this.value)"></input></td>
     </tr>
     <tr>
-      <td><input type="button" value="4"></input></td>
-      <td><input type="button" value="5"></input></td>
-      <td><input type="button" value="6"></input></td>
-      <td><input type="button" value="+"></input></td>
+      <td><input type="button" value="4" onclick="handleNumberClick(this.value)"></input></td>
+      <td><input type="button" value="5" onclick="handleNumberClick(this.value)"></input></td>
+      <td><input type="button" value="6" onclick="handleNumberClick(this.value)"></input></td>
+      <td><input type="button" value="+" onclick="handleOperatorClick(this.value)"></input></td>
     </tr>
     <tr>
-      <td><input type="button" value="1"></input></td>
-      <td><input type="button" value="2"></input></td>
-      <td><input type="button" value="3"></input></td>
-      <td rowspan="2"><input type="button" value="="></input></td>
+      <td><input type="button" value="1" onclick="handleNumberClick(this.value)"></input></td>
+      <td><input type="button" value="2" onclick="handleNumberClick(this.value)"></input></td>
+      <td><input type="button" value="3" onclick="handleNumberClick(this.value)"></input></td>
+      <td rowspan="2"><input type="button" value="=" onclick="handleEqualClick()"></input></td>
     </tr>
     <tr>
-      <td colspan="2"><input type="button" value="0"></input></td>
-      <td><input type="button" value="."></input></td>
+      <td colspan="2"><input type="button" value="0" onclick="handleNumberClick(this.value)"></input></td>
+      <td><input type="button" value="." onclick="handleNumberClick(this.value)"></input></td>
     </tr>
   </table>
 </div>
